@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="datosPersonales">  
+ <xs:complexType>
+   <xs:sequence>
+    <xs:element name="nombre" type="tiponombre"/>
+    <xs:element name="genero" type="tipogenero" />
+    <xs:element name="fechanacimiento" type="xs:date" />
+    <xs:element name="pesolibras" type="tipopeso" />
+    <xs:element name="estaturacm" type="tipoest" />
+    <xs:element name="telefonos"  type="tipotelfs" minOccurs="0" maxOccurs="1"/>
+    <xs:element name="direccion" type="xs:string"/>
+    <xs:choice minOccurs="0" maxOccurs="4">
+          <xs:element name="email" type="tipoemail"/>
+          <xs:element name="paginaweb" type="tipouri"/>
+    </xs:choice>
+    <xs:element name="ingreso" type="tipoingreso"/>
+   </xs:sequence>
+</xs:complexType>
+</xs:element>
+
+ 
+ <xs:simpleType name="tiponombre" >
+      <xs:restriction base="xs:string">
+        <xs:pattern value="[a-zA-Záéíóú]+ [a-zA-Záéíóú]+"/>
+      </xs:restriction>
+ </xs:simpleType>
+
+
+ <xs:simpleType name="tipogenero" >
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="Masculino" />
+        <xs:enumeration value="Femenino" />
+      </xs:restriction>
+ </xs:simpleType>
+ 
+ <xs:simpleType name="tipopeso" >
+      <xs:restriction base="xs:float">
+         <xs:minInclusive value="25.00"/>
+         <xs:maxInclusive value="300.00"/>
+      </xs:restriction>
+ </xs:simpleType>
+ 
+ <xs:simpleType name="tipoest" >
+      <xs:restriction base="xs:unsignedByte">
+         <xs:minInclusive value="45"/>
+         <xs:maxInclusive value="250"/>
+         <xs:pattern value="[0-9]{2,3}"/>
+      </xs:restriction>
+ </xs:simpleType>
+
+<xs:group name="grupotelfs">
+ <xs:sequence>
+    <xs:element name="telfcasa">
+      <xs:simpleType>
+        <xs:restriction base="xs:integer">
+           <xs:pattern value="2[0-9]{7}"/>
+        </xs:restriction>  
+      </xs:simpleType>
+    </xs:element>
+    <xs:element name="telfcelular" > 
+      <xs:complexType >
+        <xs:simpleContent>
+          <xs:extension base="tipocel">
+             <xs:attribute name="compania" type="tipocia" use="required"/>
+          </xs:extension>
+        </xs:simpleContent>
+      </xs:complexType>
+    </xs:element>
+    <xs:element name="telfofic" type="xs:integer"/>
+  </xs:sequence>
+ </xs:group>
+ 
+ <xs:complexType name="tipotelfs">  
+   <xs:sequence> 
+     <xs:group ref="grupotelfs"/>
+   </xs:sequence>
+   <xs:attribute name="codigo.pais" type="xs:unsignedShort" use="required"/>
+   <xs:attribute name="codigo.area" type="xs:unsignedShort" use="required"/>
+ </xs:complexType>
+
+ <xs:simpleType name="tipocia">
+ <xs:restriction base="xs:string">
+     <xs:pattern value="movistar|claro|digicel|tigo"/>
+ </xs:restriction>
+ </xs:simpleType>
+ 
+ <xs:simpleType name="tipocel">
+ <xs:restriction base="xs:integer">
+     <xs:pattern value="7[0-9]{7}"/>
+ </xs:restriction>
+ </xs:simpleType>
+ 
+ <xs:simpleType name="tipoemail" >
+      <xs:restriction base="xs:string">
+         <xs:pattern   value=".+@.+\..{3,4}"/>
+      </xs:restriction>
+ </xs:simpleType>
+
+ <xs:simpleType name="tipouri" >
+      <xs:restriction base="xs:anyURI">
+         <xs:minLength   value="10"/>
+         <xs:maxLength   value="120"/>
+      </xs:restriction>
+ </xs:simpleType>
+
+
+  <xs:simpleType name="tipoingreso" >
+      <xs:union memberTypes="tipo.na tipodinero" />
+  </xs:simpleType>
+
+
+ <xs:simpleType name="tipo.na" >
+      <xs:restriction base="xs:string">
+         <xs:pattern   value="no aplica"/>
+      </xs:restriction>
+ </xs:simpleType>
+
+
+  <xs:simpleType name="tipodinero" >
+      <xs:restriction base="xs:decimal">
+         <xs:totalDigits   value="7"/>
+         <xs:fractionDigits   value="2"/>
+         <xs:minInclusive   value="240.00"/>
+      </xs:restriction>
+ </xs:simpleType>
+ 
+</xs:schema>

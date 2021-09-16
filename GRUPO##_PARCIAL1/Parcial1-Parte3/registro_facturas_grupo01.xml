@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!-- grupo ##  -->
-<registro periodo="2012-03">
+<!-- grupo 01  -->
+<registro periodo="2012-03" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="registrofacturasgrupo01.xsd">
 <responsable>Lic. Inocencio P�rez</responsable>
 <factura tipo="final">
 <num>564</num>
