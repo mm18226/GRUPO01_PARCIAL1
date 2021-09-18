@@ -180,7 +180,7 @@
             </lineafactura>
             <total>
                   <moneda>$</moneda>
-                  <valor>100.00</valor>
+                  <valor>100.000</valor>
             </total>
       </factura>
 </registro>
