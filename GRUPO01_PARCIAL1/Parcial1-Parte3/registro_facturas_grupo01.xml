@@ -182,4 +182,133 @@
                   <valor>100.000</valor>
             </total>
       </factura>
+      
+      <factura tipo="final">
+            <num>387</num>
+            <cliente codigo="7489" sexo="masculino">
+                  <nombre>Leonardo Paredes</nombre>
+                  <documento>
+                        <dui vence="2024-08-21">07854319-0</dui>
+                  </documento>
+                  <telefono tipo="celular" cia="digicel">72750098</telefono>
+                  <email>leoPa@gmail.com</email>
+            </cliente>
+            <direccion depto="San Miguel" municipio="San Miguel">
+                  <casa>Residencial Palos altos Num.353</casa>
+            </direccion>
+            <lineafactura factura="387">
+                  <codigo tipo="perecedero">105</codigo>
+                  <detalle>Litro de leche</detalle>
+                  <cantidad>3</cantidad>
+                  <precio>
+                        <moneda>$</moneda>
+                        <valor>1.50</valor>
+                  </precio>
+                  <subtotal>
+                        <moneda>$</moneda>
+                        <valor>4.50</valor>
+                  </subtotal>
+            </lineafactura>
+            <total>
+                  <moneda>$</moneda>
+                  <valor>4.50</valor>
+            </total>
+      </factura>
+      
+       <factura tipo="final">
+            <num>450</num>
+            <cliente codigo="4578 " sexo="masculino">
+                  <nombre>Walter White</nombre>
+                  <documento>
+                        <dui vence="2026-12-03">00574985-0</dui>
+                  </documento>
+                  <telefono tipo="fijo">22702371</telefono>
+                  <email>hermanosPollo@gmail.com</email>
+            </cliente>
+            <direccion depto="La Libertad" municipio="Santa Tecla">
+                  <casa>Residencial las colinas Num 015</casa>
+            </direccion>
+            <lineafactura factura="450">
+                  <codigo tipo="accesorio_pc">085</codigo>
+                  <detalle>Memoria USB 16GB</detalle>
+                  <cantidad>2</cantidad>
+                  <precio>
+                        <moneda>$</moneda>
+                        <valor>10.00</valor>
+                  </precio>
+                  <subtotal>
+                        <moneda>$</moneda>
+                        <valor>20.00</valor>
+                  </subtotal>
+            </lineafactura>
+            <total>
+                  <moneda>$</moneda>
+                  <valor>20.00</valor>
+            </total>
+      </factura> 
+      
+ <factura tipo="credito">
+            <num>777</num>
+            <cliente codigo="1258 " sexo="masculino">
+                  <nombre>Jose Alfredo</nombre>
+                  <documento>
+                        <dui vence="2025-11-30">47852169-2</dui>
+                  </documento>
+                  <telefono tipo="fijo">22222223</telefono>
+                  <email>Alfredo12345@gmail.com</email>
+            </cliente>
+            <direccion depto="Santa Ana" municipio="Metapan">
+                  <casa>Avenida 45 Sur  Num 150</casa>
+            </direccion>
+            <lineafactura factura="777">
+                  <codigo tipo="souvenir">745</codigo>
+                  <detalle>Camisa estampado el salvador</detalle>
+                  <cantidad>1</cantidad>
+                  <precio>
+                        <moneda>$</moneda>
+                        <valor>15.00</valor>
+                  </precio>
+                  <subtotal>
+                        <moneda>$</moneda>
+                        <valor>15.00</valor>
+                  </subtotal>
+            </lineafactura>
+            <total>
+                  <moneda>$</moneda>
+                  <valor>15.00</valor>
+            </total>
+      </factura>       
+      
+      <factura tipo="credito">
+            <num>173</num>
+            <cliente codigo="9754" sexo="femenino">
+                  <nombre>Lily Aldrin</nombre>
+                  <documento>
+                        <dui vence="2022-01-16">02875492-3</dui>
+                  </documento>
+                  <telefono tipo="celular" cia="claro">78743615</telefono>
+                  <email>Lilypad@gmail.com</email>
+            </cliente>
+            <direccion depto="San Salvador" municipio="Soyapango">
+                  <oficina>Colonia amatepec pasaje 2A casa 125</oficina>
+            </direccion>
+            <lineafactura factura="173">
+                  <codigo tipo="accesorio_pc">247</codigo>
+                  <detalle>audifonos</detalle>
+                  <cantidad>2</cantidad>
+                  <precio>
+                        <moneda>$</moneda>
+                        <valor>15.00</valor>
+                  </precio>
+                  <subtotal>
+                        <moneda>$</moneda>
+                        <valor>30.00</valor>
+                  </subtotal>
+            </lineafactura>
+            <total>
+                  <moneda>$</moneda>
+                  <valor>30.000</valor>
+            </total>
+      </factura>
+      
 </registro>
