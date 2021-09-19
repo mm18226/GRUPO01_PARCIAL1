@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!-- grupo 01  -->
-<registro periodo="2012-03"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="registrofacturasgrupo01.xsd">
-      <responsable>Lic. Inocencio P�rez</responsable>
-
+<registro xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" periodo="2012-03" xsi:noNamespaceSchemaLocation="registrofacturasgrupo01.xsd">
+      <responsable>Lic. Inocencio Pérez</responsable>
       <factura tipo="final">
             <num>564</num>
             <cliente codigo="2617" sexo="femenino">
-                  <nombre>Javier Rafel</nombre>
+                  <nombre>Maria Valez</nombre>
                   <documento>
                         <dui vence="2018-03-03">02349867-9</dui>
                   </documento>
@@ -35,11 +33,10 @@
                   <valor>11.30</valor>
             </total>
       </factura>
-
       <factura tipo="credito">
             <num>570</num>
             <cliente codigo="5032" sexo="femenino">
-                  <nombre>Julia P�rez</nombre>
+                  <nombre>Julia Perez</nombre>
                   <documento>
                         <pasaporte pais="USA">A98672340</pasaporte>
                   </documento>
@@ -67,7 +64,6 @@
                   <valor>1050.00</valor>
             </total>
       </factura>
-
       <factura tipo="credito">
             <num>575</num>
             <cliente codigo="5327" sexo="masculino">
@@ -83,7 +79,7 @@
             </direccion>
             <lineafactura factura="575">
                   <codigo tipo="accesorio_pc">247</codigo>
-                  <detalle>Mouse inal�mbrico</detalle>
+                  <detalle>Mouse inalámbrico</detalle>
                   <cantidad>5</cantidad>
                   <precio>
                         <moneda>$</moneda>
@@ -99,11 +95,10 @@
                   <valor>50.00</valor>
             </total>
       </factura>
-
       <factura tipo="final">
             <num>590</num>
             <cliente codigo="617" sexo="masculino">
-                  <nombre>Juan P�rez</nombre>
+                  <nombre>Juan Perez</nombre>
                   <documento>
                         <pasaporte pais="SLV">A40298367</pasaporte>
                   </documento>
@@ -128,7 +123,6 @@
                   <valor>5.00</valor>
             </total>
       </factura>
-
       <factura tipo="final">
             <num>593</num>
             <cliente codigo="177" sexo="masculino">
@@ -157,7 +151,6 @@
                   <valor>5.00</valor>
             </total>
       </factura>
-
       <factura tipo="credito">
             <num>585</num>
             <cliente codigo="5327" sexo="masculino">
@@ -186,7 +179,7 @@
             </lineafactura>
             <total>
                   <moneda>$</moneda>
-                  <valor>100.00</valor>
+                  <valor>100.000</valor>
             </total>
       </factura>
 </registro>
