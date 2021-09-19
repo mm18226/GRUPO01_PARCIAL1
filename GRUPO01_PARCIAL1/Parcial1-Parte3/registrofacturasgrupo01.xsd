@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
 <xs:element name="registro">  
  <xs:complexType>
    <xs:sequence>
-    <xs:element name="nombre" type="tiponombre"/>
+    <xs:element name="factura" type="tiponombre"/>
     <xs:element name="genero" type="tipogenero" />
     <xs:element name="fechanacimiento" type="xs:date" />
     <xs:element name="pesolibras" type="tipopeso" />
@@ -20,20 +21,69 @@
 </xs:complexType>
 </xs:element>
 
- 
- <xs:simpleType name="tiponombre" >
+
+<!--Inicio de cliente-->
+
+
+<!--
+  <xs:complexType name="tipotelfs">  
+   <xs:sequence> 
+     <xs:group ref="grupotelfs"/>
+   </xs:sequence>
+   <xs:attribute name="codigo.pais" type="xs:unsignedShort" use="required"/>
+   <xs:attribute name="codigo.area" type="xs:unsignedShort" use="required"/>
+ </xs:complexType> -->
+
+
+<xs:complexType name="cliente">
+  <xs:sequence>
+    <xs:element name="nombre" type="string"/>
+    <xs:element name="documento">
+      <xs:simpleType>
+          
+          
+      </xs:simpleType>
+    </xs:element>
+  </xs:sequence>
+  <xs:attribute name="codigo" type="xs:integer" use="required"/>
+  <xs:attribute name="sexo" type="tipogenero" use="required"/>
+</xs:complexType>
+
+
+
+
+<xs:simpleType name="tipogenero">
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="Masculino" />
+        <xs:enumeration value="Femenino" />
+        <xs:enumeration value="Indefinido"/>
+      </xs:restriction>
+ </xs:simpleType>
+
+
+<!--Fin de cliente-->
+
+
+ <!--Primer patron de expresiones regulares-->
+ <xs:simpleType name="nombre" >
       <xs:restriction base="xs:string">
         <xs:pattern value="[a-zA-Z�����]+ [a-zA-Z�����]+"/>
       </xs:restriction>
  </xs:simpleType>
 
 
- <xs:simpleType name="tipogenero" >
-      <xs:restriction base="xs:string">
-        <xs:enumeration value="Masculino" />
-        <xs:enumeration value="Femenino" />
+<!--Segundo patron de expresiones regulares-->
+<xs:simpleType name="numero" >
+      <xs:restriction base="xs:integer">
+        <xs:pattern value="[0-9][0-9][0-9]"/>
       </xs:restriction>
  </xs:simpleType>
+
+
+
+
+
+ 
  
  <xs:simpleType name="tipopeso" >
       <xs:restriction base="xs:float">
