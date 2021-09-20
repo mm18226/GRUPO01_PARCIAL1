@@ -1,0 +1,45 @@
+body{
+    background: rgb(199, 228, 228);
+    width: 80%;
+
+}
+
+
+table, th, tr, td{
+width: 70%;
+border: 1px solid black;
+border-collapse: collapse;
+padding: auto;
+text-align: center;
+font-size: 19px;
+
+}
+
+th, td{
+    width: auto;
+}
+#encabezado{
+    border: 0px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    padding: 10px;
+    font-size: 15px;
+
+}
+td{
+    padding: 5px;
+    
+}
+p{
+    margin: 3px;;
+}
+h3{
+    font-family: Arial, Helvetica, sans-serif;
+    color: tomato;
+    font-style: oblique;
+}
+div{
+    width: 80%;
+    margin: 0 auto;
+    
+}
